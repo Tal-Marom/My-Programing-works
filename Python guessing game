@@ -1,0 +1,25 @@
+
+import random
+
+Range = int(input("Enter your range: "))
+GuessMeNumber = random.randrange(1, Range)
+
+print("\nI've picked a number between 1 and " + str(Range) + " Can you guess my number?\n")
+
+GuessCount = 0
+Guess = 0
+
+while Guess != GuessMeNumber:
+
+    Guess = int(input("Enter your Guess: "))
+
+    if Guess > GuessMeNumber:
+        print("\nYour Guess is too High!\n")
+
+    if Guess < GuessMeNumber:
+        print("\nYour Guess is too Low!\n")
+
+    GuessCount += 1
+
+print("\nYour are right! " + str(Guess) + " is my number !!! :-)")
+print("You had " + str(GuessCount) + " Guesses.")
